@@ -79,7 +79,7 @@
         // Spock        
         (yourHand === 'Spock' && opponentHand === 'Rock')||
         (yourHand === 'Spock' && opponentHand === 'Scissors')||
-        (yourHand === 'Paper' &&  opponentHand === 'Spock' )
+        (yourHand === 'Paper' &&  opponentHand === 'Spock' ) ||
 
         // Lizard poisons Spock
         (yourHand === 'Lizard' && opponentHand === 'Spock')
