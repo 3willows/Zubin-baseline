@@ -42,7 +42,7 @@
     let opponentWin = 0;
 
     function pickMove() {
-      number = Math.floor(Math.random() * 5);
+      let number = Math.floor(Math.random() * 5);
       if (number === 0) {
         return 'Rock';
       }
