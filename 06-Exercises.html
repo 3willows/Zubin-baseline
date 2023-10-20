@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <title>Caluclator</title>
+
+  <head> </head>
+
+  <body>
+    <button
+      onclick="
+      display();
+  "
+    >
+      Show Quantity
+    </button>
+
+    <button onclick="updateCartQuantityBy(1);">Add to Cart</button>
+
+    <button
+      onclick="updateCartQuantityBy(2);
+    "
+    >
+      +2
+    </button>
+
+    <button
+      onclick="updateCartQuantityBy(3);
+    "
+    >
+      +3
+    </button>
+
+    <button
+      onclick="updateCartQuantityBy(4);
+"
+    >
+      +4
+    </button>
+
+    <button
+      onclick="updateCartQuantityBy(5);
+"
+    >
+      +5
+    </button>
+
+    <button
+    onclick="updateCartQuantityBy(-1);
+"
+  >
+    Remove from Cart
+  </button>
+
+
+  <button
+  onclick="updateCartQuantityBy(-2);
+"
+>
+      -2
+    </button>
+
+    <button
+    onclick="updateCartQuantityBy(-3);
+  "
+
+    >
+      -3
+    </button>
+    <!-- ^^^ This code was changed. ^^^ -->
+
+    <button
+      onclick="
+    cartQuantity = 0;
+    console.log('Cart was reset.');
+    display();
+    "
+    >
+      Reset Cart
+    </button>
+
+    <script>
+      let cartQuantity = 0;
+
+      function display() {
+        console.log(`Cart quantity: ${cartQuantity}`);
+      }
+
+      function cartHasSpace(cartQuantity) {
+        if (cartQuantity <= 10 && cartQuantity >= 0) {
+          return true;
+        } else if (cartQuantity > 1) {
+          // or any other positive number will do
+          alert(`The cart is full!`);
+          return false;
+        } else if (cartQuantity < 1) {
+          alert(`Not enough items in cart.`);
+          return false;
+        } else {
+          alert(`This should not appear.  There is a bug.`);
+          return false;
+        }
+      }
+
+      function updateCartQuantityBy(number) {
+        if (cartHasSpace(cartQuantity + number)) {
+          cartQuantity += number;
+          display();
+        }
+      }
+
+      /*
+      // first easy exercise //
+    
+      const d = new Date();
+      let hours = d.getHours();
+      let name = 'Jasper';
+    
+      console.log(hours);
+    
+      if (hours >= 6 && hours <= 12) {
+        console.log('Good morning! ${name}' + name);
+      }
+      else if (hours >= 13 && hours <= 17) {
+        console.log(`Good afternoon! ${name}`);
+      }
+      else {
+        console.log('Good night! ' + name);
+      }
+    
+      // second easy exercise //
+    
+      let age = 3;
+      // example of no discount age
+      let isHoliday = false;
+    
+      if ((age <= 6 || age >= 65) && !isHoliday){
+        console.log('Discount!');
+      }
+      else{
+        console.log('No Discount!');
+      }
+    
+      // third easy exercise //
+    
+      let result = '';
+      let guess = 'heads';
+    
+    
+      let randomNumber = Math.random();
+      if (randomNumber < 0.5)
+      {
+        result += 'heads';
+      }
+      else{
+        result += 'tails';
+      }
+      
+      console.log(result);
+    
+      (guess === result)? console.log("You win!"): console.log("You lose!");
+    
+      */
+
+      // Challenge exercise
+    </script>
+  </body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+
+<body>
+
+  <p>
+    <button onclick="updateCalculation('1');"> 1 </button>
+    <button onclick="updateCalculation('2');"> 2 </button>
+    <button onclick="updateCalculation('3');"> 3 </button>
+    <button onclick="updateCalculation('+');"> + </button>
+
+  </p>
+
+  <p>
+    <button onclick="updateCalculation('4');"> 4 </button>
+    <button onclick="updateCalculation('5');"> 5 </button>
+    <button onclick="updateCalculation('6');"> 6 </button>
+    <button onclick="updateCalculation('-');"> - </button>
+
+  </p>
+
+  <p>
+    <button onclick="updateCalculation('7');"> 7 </button>
+    <button onclick="updateCalculation('8');"> 8 </button>
+    <button onclick="updateCalculation('9');"> 9 </button>
+    <button onclick="updateCalculation('/');"> / </button>
+  </p>
+
+  <p>
+
+    <button onclick="updateCalculation('0');"> 0 </button>
+    <button onclick="updateCalculation('.');"> . </button>
+    <button onclick="updateCalculation('/');"> / </button>
+    <button onclick="returnAnswer();"> = </button>
+  </p>
+
+  <p>
+    <button onclick="calculation = '';
+    localStorage.setItem('calculation', calculation);
+    console.log('Calculation now an empty string');
+    "> CLEAR </button>    
+    <button onclick="
+    console.log('Calculation is now: ' + calculation);
+    "> SHOW </button>
+
+  </p>
+
+</body>
+
+<script>
+
+  //the Calculator exercise
+
+  let calculation = localStorage.getItem('calculation') || '';
+
+  function updateCalculation(value) {
+        calculation += value;
+        localStorage.setItem('calculation', calculation);
+        console.log(calculation);
+      }
+
+  function returnAnswer(){
+      calculation = eval(calculation);         
+      console.log(calculation);
+  }
+
+    // if (!eval(calculation))
+    // {
+    //   console.log('Grammatical error, start again');
+    //   calculation = '';
+    //   console.log('Calculation now an empty string');
+    // }
+  // Easy exercises
+
+/*
+    const basketball = {
+    name: 'basketball',
+    price: 2095,
+    'delivery-time': '3 days',
+    size: 'medium'
+  };
+
+  const basketball2 = {
+    name: 'basketball',
+    price: 2095,
+    'delivery-time': '3 years',
+    size: 'medium'
+  };
+
+  const football = {
+    name: 'football',
+    price: 4000,
+    'delivery-time': '3 days',
+    size: 'medium'
+  };
+
+  // console.log(basketball.price);
+  // basketball.price += 500;
+  // console.log(basketball.price);
+
+  // console.log(basketball.deliveryTime);
+
+  function comparePrice(product1, product2){
+    if (product1.price === product2.price)
+    {
+      console.log('equal price');
+    }
+    else if (product1.price > product2.price)
+    {
+      return product2;
+      // less expensive product
+    }
+    else{
+      return product1;
+    }  
+  }
+
+  // console.log (comparePrice(basketball, football));
+
+  function isSameProduct(product1, product2){
+    if (product1.name === product2.name && product1.price === product2.price)
+    {
+      return true;
+    }
+    else{
+      return false;
+    }  
+  }
+
+  console.log(isSameProduct(basketball, basketball2));
+
+  console.log('O '.toLowerCase().repeat(6));
+*/
+</script>
+
+</html>
