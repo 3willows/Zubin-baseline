@@ -1,4 +1,4 @@
-A game of Rock Paper Sciessors Lizard Spock (from Big Bang Theory).
+Simple game of Rock Paper Sciessors Lizard Spock (from Big Bang Theory).
 
 The rules are as follows:-
 
