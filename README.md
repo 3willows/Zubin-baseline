@@ -1,3 +1,14 @@
-Originally a baselining exercise by my tutor.
+A game of Rock Paper Sciessors Lizard Spock (from Big Bang Theory).
 
-Now changing into a project (a game of Rock Paper Sciessors Lizard Spock).
+The rules are as follows:-
+
+"Scissors cuts Paper
+  Paper covers Rock
+  Rock crushes Lizard
+  Lizard poisons Spock
+  Spock smashes Scissors
+  Scissors decapitates Lizard
+  Lizard eats Paper
+  Paper disproves Spock
+  Spock vaporizes Rock
+  (and as it always has) Rock crushes Scissors"
