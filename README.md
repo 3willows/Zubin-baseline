@@ -11,4 +11,6 @@ The rules are as follows:-
   Lizard eats Paper <br>
   Paper disproves Spock <br>
   Spock vaporizes Rock<br>
-  (and as it always has) Rock crushes Scissors"
+  (and as it always has) Rock crushes Scissors" <br>
+
+Further reading: https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock 
