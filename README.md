@@ -16,7 +16,7 @@ See: https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock
 ## TO DO
 
 - [x] Add the rules on the webpage
-- [ ] Make the rules collapsable (and collapsed to begin with)
+- [x] Make the rules collapsable (and collapsed to begin with)
 - [ ] Add the relevant rule in the message to the user
 - [ ] Use something better than alert to report results
 - [ ] Add images (unsplash/Midjourney) to illustrate the results (e.g. rock crushes scissors)
