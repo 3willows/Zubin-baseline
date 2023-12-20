@@ -1,6 +1,4 @@
-Simple game of Rock Paper Sciessors Lizard Spock (from Big Bang Theory).
-
-The rules are as follows:-
+## RULES
 
 "Scissors cuts Paper <br>
   Paper covers Rock <br>
@@ -13,4 +11,9 @@ The rules are as follows:-
   Spock vaporizes Rock<br>
   (and as it always has) Rock crushes Scissors" <br>
 
-Further reading: https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock 
+See: https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock 
+
+## TO DO
+
+- [ ] Add a link to the rules on the webpage
+- [ ] Use something better than alert to report results
