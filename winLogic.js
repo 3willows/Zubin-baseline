@@ -45,12 +45,24 @@ function compareHands(yourHand = '') {
     (yourHand === 'Lizard' && opponentHand === 'Spock')
     ) 
     {
-    result = 'Winner: HUMAN.';
+    result = 'You win';
     yourWin++;
   }
   else {
-    result = 'Winner: COMPUTER.';
+    result = 'Computer wins.';
     opponentWin++;
   }
+
+  // Scissors cuts Paper, 
+  // Paper covers Rock, 
+  // Rock crushes Lizard, 
+  // Lizard poisons Spock, 
+  // Spock smashes Scissors, 
+  // Scissors decapitates Lizard, 
+  // Lizard eats Paper, 
+  // Paper disproves Spock, 
+  // Spock vaporizes Rock,
+  // Rock crushes Scissors.
+
   window.alert('You: ' + yourHand + '.  Computer: ' + opponentHand + '.\n\n' + result + `\n\nYour score: ${yourWin}, Computer score: ${opponentWin}`)
 }
