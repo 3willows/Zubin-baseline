@@ -15,5 +15,6 @@ See: https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock
 
 ## TO DO
 
-- [ ] Add a link to the rules on the webpage
+- [x] Add the rules on the webpage
+- [ ] Add the relevant rule in the message to the user
 - [ ] Use something better than alert to report results
