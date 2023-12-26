@@ -74,8 +74,8 @@ const buttons = [Rock, Paper, Scissors, Lizard, Spock]
 //   }
 // }
 
-const play = (selectedButton, event) => {
-  selectedButton.addEventListener(event, () => compareHands(selectedButton.id))
+const play = (selectedButton, happening) => {
+  selectedButton.addEventListener(happening, () => compareHands(selectedButton.id))
 }
 // Call the function on each button
 
