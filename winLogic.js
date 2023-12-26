@@ -1,68 +1,75 @@
-let yourWin = 0;
-let opponentWin = 0;
+let yourWin = 0
+let opponentWin = 0
 
-function pickMove() {
-  let number = Math.floor(Math.random() * 5);
+function pickMove () {
+  let number = Math.floor(Math.random() * 5)
   if (number === 0) {
-    return 'Rock';
-  }
-  else if (number === 1) {
-    return 'Paper';
+    return 'Rock'
+  } else if (number === 1) {
+    return 'Paper'
   } else if (number === 2) {
-    return 'Scissors';
-  }
-  else if (number === 3) {
-    return 'Lizard';
+    return 'Scissors'
+  } else if (number === 3) {
+    return 'Lizard'
   } else if (number === 4) {
-    return 'Spock';      }
+    return 'Spock'
+  }
 }
 
-function compareHands(yourHand = '') {
-  const opponentHand = pickMove();
-  let result = '';
+function compareHands (yourHand = '') {
+  const opponentHand = pickMove()
+  let result = ''
 
   if (yourHand === opponentHand) {
-    result = 'Tie.';
-  }
-  else if (
-
+    result = 'Tie.'
+  } else if (
     // Classic rules
-    (yourHand === 'Rock' && opponentHand === 'Scissors')||
-    (yourHand === 'Paper' &&  opponentHand === 'Rock' )||
-    (yourHand === 'Scissors' && opponentHand === 'Paper')||
-
+    (yourHand === 'Rock' && opponentHand === 'Scissors') ||
+    (yourHand === 'Paper' && opponentHand === 'Rock') ||
+    (yourHand === 'Scissors' && opponentHand === 'Paper') ||
     // Lizard
-    (yourHand === 'Lizard' &&  opponentHand === 'Paper')|| 
-    (yourHand === 'Rock' && opponentHand === 'Lizard')||
-    (yourHand === 'Scissors' && opponentHand === 'Lizard')||
-
-    // Spock        
-    (yourHand === 'Spock' && opponentHand === 'Rock')||
-    (yourHand === 'Spock' && opponentHand === 'Scissors')||
-    (yourHand === 'Paper' &&  opponentHand === 'Spock' ) ||
-
+    (yourHand === 'Lizard' && opponentHand === 'Paper') ||
+    (yourHand === 'Rock' && opponentHand === 'Lizard') ||
+    (yourHand === 'Scissors' && opponentHand === 'Lizard') ||
+    // Spock
+    (yourHand === 'Spock' && opponentHand === 'Rock') ||
+    (yourHand === 'Spock' && opponentHand === 'Scissors') ||
+    (yourHand === 'Paper' && opponentHand === 'Spock') ||
     // Lizard poisons Spock
     (yourHand === 'Lizard' && opponentHand === 'Spock')
-    ) 
-    {
-    result = 'You win';
-    yourWin++;
-  }
-  else {
-    result = 'Computer wins.';
-    opponentWin++;
+  ) {
+    result = 'You win'
+    yourWin++
+  } else {
+    result = 'Computer wins.'
+    opponentWin++
   }
 
-  // Scissors cuts Paper, 
-  // Paper covers Rock, 
-  // Rock crushes Lizard, 
-  // Lizard poisons Spock, 
-  // Spock smashes Scissors, 
-  // Scissors decapitates Lizard, 
-  // Lizard eats Paper, 
-  // Paper disproves Spock, 
-  // Spock vaporizes Rock,
-  // Rock crushes Scissors.
+  window.alert(
+    'You: ' +
+      yourHand +
+      '.  Computer: ' +
+      opponentHand +
+      '.\n\n' +
+      result +
+      `\n\nYour score: ${yourWin}, Computer score: ${opponentWin}`
+  )
+}
 
-  window.alert('You: ' + yourHand + '.  Computer: ' + opponentHand + '.\n\n' + result + `\n\nYour score: ${yourWin}, Computer score: ${opponentWin}`)
+const Rock = document.querySelector('#Rock')
+const Paper = document.querySelector('#Paper')
+const Scissors = document.querySelector('#Scissors')
+const Lizard = document.querySelector('#Lizard')
+const Spock = document.querySelector('#Spock')
+
+const playOnClick = selectedButton => {
+  selectedButton.onclick = () => {
+    compareHands(selectedButton.id)
+  }
+}
+
+const buttons = [Rock, Paper, Scissors, Lizard, Spock]
+
+for (let button of buttons) {
+  playOnClick(button)
 }
