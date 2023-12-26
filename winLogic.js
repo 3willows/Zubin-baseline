@@ -56,11 +56,17 @@ function compareHands (yourHand = '') {
   )
 }
 
+/// Select buttons by ID
+
 const Rock = document.querySelector('#Rock')
 const Paper = document.querySelector('#Paper')
 const Scissors = document.querySelector('#Scissors')
 const Lizard = document.querySelector('#Lizard')
 const Spock = document.querySelector('#Spock')
+
+const buttons = [Rock, Paper, Scissors, Lizard, Spock]
+
+// Define function to add an onclick property
 
 const playOnClick = selectedButton => {
   selectedButton.onclick = () => {
@@ -68,7 +74,7 @@ const playOnClick = selectedButton => {
   }
 }
 
-const buttons = [Rock, Paper, Scissors, Lizard, Spock]
+// Call the function on each button
 
 for (let button of buttons) {
   playOnClick(button)
