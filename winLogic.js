@@ -68,14 +68,18 @@ const buttons = [Rock, Paper, Scissors, Lizard, Spock]
 
 // Define function to add an onclick property
 
-const playOnClick = selectedButton => {
-  selectedButton.onclick = () => {
-    compareHands(selectedButton.id)
-  }
-}
+// const playOnClick = selectedButton => {
+//   selectedButton.onclick = () => {
+//     compareHands(selectedButton.id)
+//   }
+// }
 
+const play = (selectedButton, event) => {
+  selectedButton.addEventListener(event, () => compareHands(selectedButton.id))
+}
 // Call the function on each button
 
 for (let button of buttons) {
-  playOnClick(button)
+  // play(button, 'mouseover')
+  play(button, 'click')
 }
